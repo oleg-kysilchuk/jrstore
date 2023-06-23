@@ -1,0 +1,8 @@
+.page-wrapper {
+  width: 100%;
+  /* max-width: 1530px; */
+  min-width: 320px;
+  height: 100%;
+  min-height: 100%;
+  /* padding-top: 80px; */
+}

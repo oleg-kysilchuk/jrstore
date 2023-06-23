@@ -1,0 +1,44 @@
+.page-footer {
+  padding: 0 40px;
+  min-width: 320px;
+  width: 100%;
+  height: 80px;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: #171717;
+  color: #fff;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-wrap {
+    padding-top: 5px;
+}
+
+.social-link {
+    margin: 0 1px;
+}
+
+.social-icon:hover {
+    fill: #c7c7c7;
+}
+
+.scroll-btn:hover {
+    color: #c7c7c7;
+}
+
+.scroll-text {
+    margin-right: 5px;
+}
+
+.scroll-arrow {
+    position: relative;
+    top: 5px;
+}
+
+.scroll-btn:hover .scroll-arrow path {
+    fill: #c7c7c7;
+}
