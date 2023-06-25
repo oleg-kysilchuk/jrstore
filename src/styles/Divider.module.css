@@ -1,17 +1,29 @@
 .divider {
     width: 100%;
+    min-height: 170px;
     padding: 37px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #FAF9F5;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.4;
 }
 
 .text {
     margin: 0 auto;
-    max-width: 570px;
     text-align: center;
     color: #000;
+}
+
+
+.divider.thin {
+    font-size: 16px;
     font-weight: 300;
+}
+
+.divider.thin > .text {
+    max-width: 570px;
     line-height: 1.75;
 }

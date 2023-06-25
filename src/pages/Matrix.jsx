@@ -1,7 +1,10 @@
 import SectionParallax from "../components/UI/SectionParallax";
-import styles from "../styles/Matrix.module.css";
-import bgImg from "../assets/matrix-bg.jpg";
 import Divider from "../components/UI/Divider";
+import Form from "../components/forms/Form";
+import bgImg from "../assets/matrix-bg.jpg";
+import styles from "../styles/Matrix.module.css";
+import { guidesData } from "../components/util/products-data";
+import ProductCard from "../components/UI/ProductCard/ProductCard";
 
 const Matrix = () => {
   return (
@@ -11,7 +14,12 @@ const Matrix = () => {
         title="Матриця Долі"
         text="Отримайте можливість прийняти свою силу і слабкість, зцілити самооцінку, повірити в себе і стати вільними від чужих шаблонів"
       />
-      <Divider text="Матриця Долі - унікальна система самопізнання, яка завдяки зашифрованій в даті народження інформації здатна допомогти розкрити потенціал своєї особистості, усвідомити кармічні задачі та призначення в різних сферах життя" />
+      <Divider thin>
+        Матриця Долі - унікальна система самопізнання, яка завдяки зашифрованій
+        в даті народження інформації здатна допомогти розкрити потенціал своєї
+        особистості, усвідомити кармічні задачі та призначення в різних сферах
+        життя
+      </Divider>
       <section className={styles.listResults}>
         <div className={styles.listWrap}>
           <h3 className={styles.listTitle}>
@@ -48,8 +56,31 @@ const Matrix = () => {
           </ul>
         </div>
       </section>
-        {/* prop on Divider. check if props ? style.one : style.two| style={{fontSize: 42 + 'px', fontWeight: 600}} */}
-        <Divider text='Запис на індивідуальні консультації призупинений, та ви можете стати в чергу на розбір' />
+      <Divider>
+        Запис на індивідуальні консультації призупинений, <br /> та ви можете
+        стати в чергу на розбір
+      </Divider>
+      <section className={styles.formSection}>
+        <div className={styles.formContainer}>
+          <Form />
+        </div>
+      </section>
+      <Divider>Крім консультацій</Divider>
+      <section className={styles.guides}>
+        <div className={styles.guidesContainer}>
+          {guidesData.map((guide) => (
+            <ProductCard
+              key={guide.id}
+              title={guide.title}
+              price={guide.price}
+            />
+          ))}
+        </div>
+      </section>
+      <Divider>
+        Пропрацювання енергій та допомога в розкритті <br /> їх позитивного
+        потенціалу
+      </Divider>
     </>
   );
 };
