@@ -32,9 +32,33 @@
 
 .buy-btn:hover,
 .buy-btn:focus {
-    background-color: #333;
+    background-color: #fff;
+    color: #00BF20;
+    border: 1px solid #00BF20;
 }
 
 .buy-btn:active {
+    transform: scale(0.97);
+}
+
+.aroma-btn {
+    width: 100px;
+    height: 35px;
+    margin: 0 auto;
+    background-color: #00BF20;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.aroma-btn:hover,
+.aroma-btn:focus {
+    background-color: #fff;
+    color: #00BF20;
+    border: 1px solid #00BF20;
+}
+
+.aroma-btn:active {
     transform: scale(0.97);
 }

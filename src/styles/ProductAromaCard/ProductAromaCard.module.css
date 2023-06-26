@@ -1,0 +1,22 @@
+.card {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card-title {
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.card-description {
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.card-price {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}

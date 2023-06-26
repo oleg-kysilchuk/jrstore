@@ -3,8 +3,9 @@ import Divider from "../components/UI/Divider";
 import Form from "../components/forms/Form";
 import bgImg from "../assets/matrix-bg.jpg";
 import styles from "../styles/Matrix.module.css";
-import { guidesData } from "../components/util/products-data";
+import { guidesData, aromacorrectionData } from "../components/util/products-data";
 import ProductCard from "../components/UI/ProductCard/ProductCard";
+import ProductAromaCard from "../components/UI/ProductAromaCard/ProductAromaCard";
 
 const Matrix = () => {
   return (
@@ -81,6 +82,22 @@ const Matrix = () => {
         Пропрацювання енергій та допомога в розкритті <br /> їх позитивного
         потенціалу
       </Divider>
+      <section className={styles.corrections}>
+          <div className={styles.correctionsContainer}>
+          {aromacorrectionData.map((correction) => (
+            <ProductAromaCard
+              key={correction.id}
+              title={correction.title}
+              description={correction.description}
+              price={correction.price}
+            />
+          ))}
+          </div>
+      </section>
+      <section className={styles.testimonials}>
+            <h3 className={styles.testimonialsTitle}>Відгуки</h3>
+            
+      </section>
     </>
   );
 };
