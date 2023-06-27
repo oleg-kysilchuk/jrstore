@@ -6,19 +6,25 @@
     align-items: center;
     justify-content: center;
     background-color: #FAF9F5;
+    text-align: center;
+    color: #000;
+    
+}
+
+.bold {
     font-size: 38px;
     font-weight: 700;
     line-height: 1.4;
 }
 
-.text {
-    margin: 0 auto;
-    text-align: center;
-    color: #000;
+.medium {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
-
-.divider.thin {
+.thin {
     font-size: 16px;
     font-weight: 300;
 }

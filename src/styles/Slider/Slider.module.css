@@ -1,0 +1,25 @@
+/* .slick-prev::before {
+    color: #000;
+    font-size: 40px;
+}
+
+.slick-next::before {
+    color: #000;
+    font-size: 40px;
+} */
+
+.slider-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* div.slick-list {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+button.slick-arrow.slick-next {
+    right: 0px;
+} */

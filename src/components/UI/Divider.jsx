@@ -1,11 +1,23 @@
-import styles from '../../styles/Divider.module.css'
+import styles from "../../styles/Divider.module.css";
 
 const Divider = (props) => {
-    return (
-        <section className={props.thin ? `${styles.divider} ${styles.thin}` : styles.divider}>
-            <p className={styles.text}>{props.children}</p>
-        </section>
-    )
-}
+  let style;
+
+  if (props.bold) {
+    style = styles.bold;
+  }
+  if (props.medium) {
+    style = styles.medium;
+  }
+  if (props.thin) {
+    style = styles.thin;
+  }
+
+  return (
+    <section className={`${styles.divider} ${style}`}>
+      <p className={styles.text}>{props.children}</p>
+    </section>
+  );
+};
 
 export default Divider;

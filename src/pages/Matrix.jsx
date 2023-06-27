@@ -3,9 +3,16 @@ import Divider from "../components/UI/Divider";
 import Form from "../components/forms/Form";
 import bgImg from "../assets/matrix-bg.jpg";
 import styles from "../styles/Matrix.module.css";
-import { guidesData, aromacorrectionData } from "../components/util/products-data";
+import {
+  guidesData,
+  aromacorrectionData,
+} from "../components/util/products-data";
 import ProductCard from "../components/UI/ProductCard/ProductCard";
 import ProductAromaCard from "../components/UI/ProductAromaCard/ProductAromaCard";
+import SliderTestimonials from "../components/UI/Slider/Slider";
+import AchievementItem from "../components/UI/AchievementItem";
+import { matrixPageTestimonials as sliderTmages } from "../components/util/products-data";
+import { achievementsMatriPage as achievements } from "../components/util/products-data";
 
 const Matrix = () => {
   return (
@@ -57,7 +64,7 @@ const Matrix = () => {
           </ul>
         </div>
       </section>
-      <Divider>
+      <Divider bold>
         Запис на індивідуальні консультації призупинений, <br /> та ви можете
         стати в чергу на розбір
       </Divider>
@@ -66,7 +73,7 @@ const Matrix = () => {
           <Form />
         </div>
       </section>
-      <Divider>Крім консультацій</Divider>
+      <Divider bold>Крім консультацій</Divider>
       <section className={styles.guides}>
         <div className={styles.guidesContainer}>
           {guidesData.map((guide) => (
@@ -78,12 +85,12 @@ const Matrix = () => {
           ))}
         </div>
       </section>
-      <Divider>
+      <Divider bold>
         Пропрацювання енергій та допомога в розкритті <br /> їх позитивного
         потенціалу
       </Divider>
       <section className={styles.corrections}>
-          <div className={styles.correctionsContainer}>
+        <div className={styles.correctionsContainer}>
           {aromacorrectionData.map((correction) => (
             <ProductAromaCard
               key={correction.id}
@@ -92,11 +99,20 @@ const Matrix = () => {
               price={correction.price}
             />
           ))}
-          </div>
+        </div>
       </section>
       <section className={styles.testimonials}>
-            <h3 className={styles.testimonialsTitle}>Відгуки</h3>
-            
+        <h3 className={styles.testimonialsTitle}>Відгуки</h3>
+          <SliderTestimonials data={sliderTmages}></SliderTestimonials>
+      </section>
+      <section className={styles.achievements}>
+            {achievements.map((a) => (
+              <AchievementItem key={a.id} numbers={a.numbers} text={a.text} />
+            ))}
+      </section>
+      <Divider medium>Відповіді на популярні запитання</Divider>
+      <section className={styles.faqSection}>
+        
       </section>
     </>
   );
