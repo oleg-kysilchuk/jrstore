@@ -1,5 +1,5 @@
-import styles from "../styles/Footer.module.css";
-import scrollToTop from "./util/scroll";
+import styles from "./Footer.module.css";
+import scrollToTop from "../util/scroll";
 
 const Footer = () => {
   return (

@@ -1,18 +1,22 @@
-import SectionParallax from "../components/UI/SectionParallax";
-import Divider from "../components/UI/Divider";
-import Form from "../components/forms/Form";
+import SectionParallax from "../components/UI/SectionParallax/SectionParallax";
+import Divider from "../components/UI/Divider/Divider";
+import ContactForm from "../components/Forms/ContactForm";
 import bgImg from "../assets/matrix-bg.jpg";
 import styles from "../styles/Matrix.module.css";
-import {
-  guidesData,
-  aromacorrectionData,
-} from "../components/util/products-data";
-import ProductCard from "../components/UI/ProductCard/ProductCard";
-import ProductAromaCard from "../components/UI/ProductAromaCard/ProductAromaCard";
-import SliderTestimonials from "../components/UI/Slider/Slider";
-import AchievementItem from "../components/UI/AchievementItem";
-import { matrixPageTestimonials as sliderTmages } from "../components/util/products-data";
-import { achievementsMatriPage as achievements } from "../components/util/products-data";
+import ProductCardMain from "../components/ProductCardMain/ProductCardMain";
+import ProductCardSecondary from "../components/ProductCardSecondary/ProductCardSecondary";
+import SliderTestimonials from "../components/Slider/Slider";
+import AchievementItem from "../components/AchievementItem/AchievementItem";
+import FAQComponent from "../components/FAQ/FAQComponent";
+// import { productGuidesData as guidesData } from "../components/util/matrixPage-data";
+// import { productCorrectionData as correctionData } from "../components/util/matrixPage-data";
+// import { testimonialsMatrixPage as sliderImages } from "../components/util/matrixPage-data";
+// import { achievementsMatrixPage as achievements } from "../components/util/matrixPage-data";
+// import { faqQuestionsMatrixPage as faqQuestions } from "../components/util/matrixPage-data";
+import Section from "../components/UI/Section/Section";
+import List from "../components/List/List";
+import ListItem from "../components/List/ListItem";
+import { * as matrixPageData } from "../components/util/matrixPage-data";
 
 const Matrix = () => {
   return (
@@ -28,71 +32,61 @@ const Matrix = () => {
         особистості, усвідомити кармічні задачі та призначення в різних сферах
         життя
       </Divider>
-      <section className={styles.listResults}>
-        <div className={styles.listWrap}>
-          <h3 className={styles.listTitle}>
-            Які результати отримали <br />
-            мої клієнти після консультації:
-          </h3>
-          <ul className={styles.list}>
-            <li className={styles.listItem}>
-              Набуття стану ясності та розслаблення через розуміння себе та тих
-              процесів, що відбуваються в житті
-            </li>
-            <li className={styles.listItem}>
-              Усвідомлення того, куди рухатися далі, та віра, що все вийде
-            </li>
-            <li className={styles.listItem}>
-              Збільшення доходу в кілька разів, покращення якості життя
-            </li>
-            <li className={styles.listItem}>
-              Поліпшення відносин із партнером, перезавантаження сфери відносин
-            </li>
-            <li className={styles.listItem}>
-              Прийняття себе, налагодження контакту з собою, усвідомлення своєї
-              сили та «тіні»
-            </li>
-            <li className={styles.listItem}>
-              Набуття улюбленої справи, нової професії
-            </li>
-            <li className={styles.listItem}>
-              Поліпшення стосунків з батьками, відпускання образ
-            </li>
-            <li className={styles.listItem}>
-              Набуття впевненості та зцілення самооцінки
-            </li>
-          </ul>
-        </div>
-      </section>
+      <Section>
+        <List title="Які результати отримали мої клієнти після консультації:">
+          <ListItem>
+            Набуття стану ясності та розслаблення через розуміння себе та тих
+            процесів, що відбуваються в житті
+          </ListItem>
+          <ListItem>
+            Усвідомлення того, куди рухатися далі, та віра, що все вийде
+          </ListItem>
+          <ListItem>
+            Збільшення доходу в кілька разів, покращення якості життя
+          </ListItem>
+          <ListItem>
+            Поліпшення відносин із партнером, перезавантаження сфери відносин
+          </ListItem>
+          <ListItem>
+            Прийняття себе, налагодження контакту з собою, усвідомлення своєї
+            сили та «тіні»
+          </ListItem>
+          <ListItem>Набуття улюбленої справи, нової професії</ListItem>
+          <ListItem>
+            Поліпшення стосунків з батьками, відпускання образ
+          </ListItem>
+          <ListItem>Набуття впевненості та зцілення самооцінки</ListItem>
+        </List>
+      </Section>
       <Divider bold>
         Запис на індивідуальні консультації призупинений, <br /> та ви можете
         стати в чергу на розбір
       </Divider>
-      <section className={styles.formSection}>
+      <Section>
         <div className={styles.formContainer}>
-          <Form />
+          <ContactForm />
         </div>
-      </section>
+      </Section>
       <Divider bold>Крім консультацій</Divider>
-      <section className={styles.guides}>
+      <Section className={styles.guides}>
         <div className={styles.guidesContainer}>
-          {guidesData.map((guide) => (
-            <ProductCard
+          {matrixPageData.guidesData.map((guide) => (
+            <ProductCardMain
               key={guide.id}
               title={guide.title}
               price={guide.price}
             />
           ))}
         </div>
-      </section>
+      </Section>
       <Divider bold>
         Пропрацювання енергій та допомога в розкритті <br /> їх позитивного
         потенціалу
       </Divider>
-      <section className={styles.corrections}>
+      <Section>
         <div className={styles.correctionsContainer}>
-          {aromacorrectionData.map((correction) => (
-            <ProductAromaCard
+          {matrixPageData.correctionsData.map((correction) => (
+            <ProductCardSecondary
               key={correction.id}
               title={correction.title}
               description={correction.description}
@@ -100,20 +94,20 @@ const Matrix = () => {
             />
           ))}
         </div>
-      </section>
-      <section className={styles.testimonials}>
+      </Section>
+      <Section className={styles.testimonials}>
         <h3 className={styles.testimonialsTitle}>Відгуки</h3>
-          <SliderTestimonials data={sliderTmages}></SliderTestimonials>
-      </section>
-      <section className={styles.achievements}>
-            {achievements.map((a) => (
-              <AchievementItem key={a.id} numbers={a.numbers} text={a.text} />
-            ))}
-      </section>
+        <SliderTestimonials data={sliderImages}></SliderTestimonials>
+      </Section>
+      <Section className={styles.achievements}>
+        {matrixPageData.achievements.map((a) => (
+          <AchievementItem key={a.id} numbers={a.numbers} text={a.text} />
+        ))}
+      </Section>
       <Divider medium>Відповіді на популярні запитання</Divider>
-      <section className={styles.faqSection}>
-        
-      </section>
+      <Section>
+        <FAQComponent matrixPage />
+      </Section>
     </>
   );
 };

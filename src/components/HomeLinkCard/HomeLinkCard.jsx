@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import styles from "../../styles/HomepageCard.module.css";
-import ButtonLink from "../UI/ButtonLink";
+import styles from "./HomeLinkCard.module.css";
+import ButtonLink from "../UI/ButtonLink/ButtonLink";
 
 const HomepageCard = (props) => {
   return (

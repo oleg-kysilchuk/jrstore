@@ -1,4 +1,4 @@
-import styles from "../../styles/SectionParallax.module.css";
+import styles from "./SectionParallax.module.css";
 
 const SectionParallax = (props) => {
   return (

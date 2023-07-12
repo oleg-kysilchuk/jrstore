@@ -1,26 +1,24 @@
-import HomepageCard from "../components/UI/HomepageCard";
+import HomeLinkCard from "../components/HomeLinkCard/HomeLinkCard";
 import imgAbout from "../assets/photo-julia.jpg";
 import styles from "../styles/Home.module.css";
+import Section from "../components/UI/Section/Section";
 
 const Home = () => {
   return (
     <>
-      <section className={styles.container}>
+      <Section className={styles.linksContainer}>
         <h1 className={styles.mainTitle}>Точки нашого дотику:</h1>
         <div className={styles.services}>
-          <HomepageCard to='/matrix' className={styles.servicesItem} title="Матриця Долі" />
-          <HomepageCard to='/bmscommunity'
-            className={styles.servicesItem}
+          <HomeLinkCard to="/matrix" title="Матриця Долі" />
+          <HomeLinkCard
+            to="/bmscommunity"
             title='Ком&apos;юніті "Be My Sister"'
           />
-          <HomepageCard to='/coaching' className={styles.servicesItem} title="Супровід" />
-          <HomepageCard to='/products'
-            className={styles.servicesItem}
-            title="Продукти в записі"
-          />
+          <HomeLinkCard to="/coaching" title="Супровід" />
+          <HomeLinkCard to="/products" title="Продукти в записі" />
         </div>
-      </section>
-      <section className={styles.about}>
+      </Section>
+      <Section className={styles.about}>
         <img className={styles.aboutImage} src={imgAbout} alt="Про мене" />
         <div className={styles.aboutList}>
           <h3 className={styles.aboutTitle}>Про мене:</h3>
@@ -34,8 +32,8 @@ const Home = () => {
               допомога в розкритті духовного потенціалу людини
             </li>
             <li className={styles.listItem}>
-              об'єднання в одному полі жінок, що хочуть глибше пізнати себе
-              та світ
+              об'єднання в одному полі жінок, що хочуть глибше пізнати себе та
+              світ
             </li>
             <li className={styles.listItem}>
               передача знань про духовну природу людини
@@ -63,7 +61,7 @@ const Home = () => {
             </li>
           </ul>
         </div>
-      </section>
+      </Section>
     </>
   );
 };

@@ -1,5 +1,5 @@
-import styles from '../../../styles/ProductAromaCard/ProductAromaCard.module.css';
-import CardButton from '../ProductCard/CardButton';
+import styles from './ProductCardSecondary.module.css';
+import CardButton from '../ProductCardMain/CardButton';
 
 const ProductAromaCard = (props) => {
     return (

@@ -1,0 +1,18 @@
+.faq-question {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 10px 0 0;
+}
+
+.faq-answer .open {
+    display: block;
+}

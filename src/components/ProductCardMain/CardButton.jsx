@@ -1,4 +1,4 @@
-import styles from '../../../styles/ProductCard/CardButton.module.css';
+import styles from './CardButton.module.css';
 
 const CardButton = (props) => {
 

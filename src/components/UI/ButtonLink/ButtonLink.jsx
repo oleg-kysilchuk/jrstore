@@ -1,4 +1,4 @@
-import styles from "../../styles/ButtonLink.module.css";
+import styles from "./ButtonLink.module.css";
 
 const ButtonLink = (props) => {
   return (

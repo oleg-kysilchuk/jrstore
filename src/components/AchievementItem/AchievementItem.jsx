@@ -1,4 +1,4 @@
-import styles from '../../styles/AchievementItem.module.css';
+import styles from './AchievementItem.module.css';
 
 const AchievementItem = (props) => {
     return (

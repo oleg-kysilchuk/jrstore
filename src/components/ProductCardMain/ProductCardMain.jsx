@@ -1,5 +1,5 @@
-import CardButton from '../ProductCard/CardButton';
-import styles from '../../../styles/ProductCard/ProductCard.module.css';
+import CardButton from './CardButton';
+import styles from './ProductCardMain.module.css';
 
 const ProductCard = (props) => {
     return (

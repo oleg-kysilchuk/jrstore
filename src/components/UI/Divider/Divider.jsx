@@ -1,4 +1,4 @@
-import styles from "../../styles/Divider.module.css";
+import styles from "./Divider.module.css";
 
 const Divider = (props) => {
   let style;

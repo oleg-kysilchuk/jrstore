@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import styles from '../../../styles/Slider/Slider.module.css';
+import styles from './Slider.module.css';
 
 const SliderTestimonials = (props) => {
   const sliderSettings = {

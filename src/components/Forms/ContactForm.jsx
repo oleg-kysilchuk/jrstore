@@ -1,4 +1,4 @@
-import styles from '../../styles/Form.module.css'
+import styles from './ContactForm.module.css'
 
 const Form = () => {
     return (

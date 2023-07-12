@@ -1,0 +1,20 @@
+.list-item {
+  padding-left: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 70px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.list-item::before {
+  content: "";
+  width: 55px;
+  height: 55px;
+  left: -80px;
+  position: absolute;
+  background-image: url("../../assets/list-bullet.svg");
+}
