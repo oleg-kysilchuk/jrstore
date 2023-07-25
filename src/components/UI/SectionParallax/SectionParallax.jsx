@@ -3,7 +3,7 @@ import styles from "./SectionParallax.module.css";
 const SectionParallax = (props) => {
   return (
     <section
-      style={{ backgroundImage: `url(${props.bgImage})` }}
+      style={{ backgroundImage: `url('${props.bgImage}')` }}
       className={styles.bgParallax}
     >
       <div className={styles.mask}>

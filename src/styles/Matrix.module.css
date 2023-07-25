@@ -1,13 +1,5 @@
-.form-container {
-  margin: 0 auto;
-  max-width: 760px;
-}
-
-.guides {
-  padding-top: 75px;
-}
-
 .guides-container {
+  padding-top: 25px;
   margin: 0 auto;
   max-width: 1200px;
   display: flex;
@@ -26,7 +18,7 @@
 }
 
 .testimonials {
-  background-color: #FAF9F5;
+  background-color: #faf9f5;
 }
 
 .testimonials-title {

@@ -1,18 +1,32 @@
 .faq-question {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    cursor: pointer;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .faq-answer {
-    display: none;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 1.5;
-    padding: 10px 0 0;
+  display: none;
+}
+
+.faq-list {
+  display: none;
 }
 
 .faq-answer .open {
-    display: block;
+  display: block;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 10px 0 0;
+  margin-bottom: 30px;
+}
+
+.faq-list .open {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.faq-list .open > .faq-listitem {
+  line-height: 1.6;
 }

@@ -3,10 +3,12 @@ import bgImg from "../assets/coaching-bg.jpg";
 import Divider from "../components/UI/Divider/Divider";
 import Section from "../components/UI/Section/Section";
 import ContactForm from "../components/Forms/ContactForm";
-
 import styles from "../styles/Coaching.module.css";
 import List from "../components/List/List";
 import ListItem from "../components/List/ListItem";
+import FAQComponent from "../components/FAQ/FAQComponent";
+import SliderTestimonials from "../components/Slider/Slider";
+import { testimonials } from "../components/util/coachingPage-data";
 
 const Coaching = () => {
   return (
@@ -40,11 +42,16 @@ const Coaching = () => {
         стати в чергу
       </Divider>
       <Section>
-        <div className={styles.formContainer}>
-          <ContactForm />
-        </div>
+        <ContactForm />
+      </Section>
+      <Section>
+        <h3 className={styles.testimonialsTitle}>Відгуки</h3>
+        <SliderTestimonials data={testimonials} />
       </Section>
       <Divider medium>Відповіді на популярні запитання</Divider>
+      <Section>
+        <FAQComponent coachingPage />
+      </Section>
     </>
   );
 };

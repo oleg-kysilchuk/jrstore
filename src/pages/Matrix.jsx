@@ -8,15 +8,10 @@ import ProductCardSecondary from "../components/ProductCardSecondary/ProductCard
 import SliderTestimonials from "../components/Slider/Slider";
 import AchievementItem from "../components/AchievementItem/AchievementItem";
 import FAQComponent from "../components/FAQ/FAQComponent";
-// import { productGuidesData as guidesData } from "../components/util/matrixPage-data";
-// import { productCorrectionData as correctionData } from "../components/util/matrixPage-data";
-// import { testimonialsMatrixPage as sliderImages } from "../components/util/matrixPage-data";
-// import { achievementsMatrixPage as achievements } from "../components/util/matrixPage-data";
-// import { faqQuestionsMatrixPage as faqQuestions } from "../components/util/matrixPage-data";
 import Section from "../components/UI/Section/Section";
 import List from "../components/List/List";
 import ListItem from "../components/List/ListItem";
-import { * as matrixPageData } from "../components/util/matrixPage-data";
+import * as matrixPageData from "../components/util/matrixPage-data";
 
 const Matrix = () => {
   return (
@@ -63,16 +58,15 @@ const Matrix = () => {
         стати в чергу на розбір
       </Divider>
       <Section>
-        <div className={styles.formContainer}>
-          <ContactForm />
-        </div>
+        <ContactForm />
       </Section>
       <Divider bold>Крім консультацій</Divider>
-      <Section className={styles.guides}>
+      <Section>
         <div className={styles.guidesContainer}>
           {matrixPageData.guidesData.map((guide) => (
             <ProductCardMain
-              key={guide.id}
+              key={guide._id}
+              id={guide._id}
               title={guide.title}
               price={guide.price}
             />
@@ -87,7 +81,8 @@ const Matrix = () => {
         <div className={styles.correctionsContainer}>
           {matrixPageData.correctionsData.map((correction) => (
             <ProductCardSecondary
-              key={correction.id}
+              key={correction._id}
+              id={correction._id}
               title={correction.title}
               description={correction.description}
               price={correction.price}
@@ -97,11 +92,11 @@ const Matrix = () => {
       </Section>
       <Section className={styles.testimonials}>
         <h3 className={styles.testimonialsTitle}>Відгуки</h3>
-        <SliderTestimonials data={sliderImages}></SliderTestimonials>
+        <SliderTestimonials data={matrixPageData.testimonials} />
       </Section>
       <Section className={styles.achievements}>
         {matrixPageData.achievements.map((a) => (
-          <AchievementItem key={a.id} numbers={a.numbers} text={a.text} />
+          <AchievementItem key={a._id} numbers={a.numbers} text={a.text} />
         ))}
       </Section>
       <Divider medium>Відповіді на популярні запитання</Divider>
