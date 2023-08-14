@@ -10,16 +10,27 @@ const Header = () => {
           <img className={styles.logo} src={logo} />
         </NavLink>
         <div className={styles.navWrap}>
-          <NavLink className={styles.navLink} to="/matrix">
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? styles.linkActive : styles.navLink
+            }
+            to="/matrix"
+          >
             Матриця Долі
           </NavLink>
-          <NavLink className={styles.navLink} to="/bmscommunity">
+          <NavLink className={({ isActive }) =>
+              isActive ? styles.linkActive : styles.navLink
+            } to="/bmscommunity">
             BMS
           </NavLink>
-          <NavLink className={styles.navLink} to="/coaching">
+          <NavLink className={({ isActive }) =>
+              isActive ? styles.linkActive : styles.navLink
+            } to="/coaching">
             Супровід
           </NavLink>
-          <NavLink className={styles.navLink} to="/products">
+          <NavLink className={({ isActive }) =>
+              isActive ? styles.linkActive : styles.navLink
+            } to="/products">
             В записі
           </NavLink>
         </div>

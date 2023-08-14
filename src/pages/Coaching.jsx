@@ -18,10 +18,10 @@ const Coaching = () => {
         title="Супровід"
         text="отримайте підтримку у досягненні цілей та на шляху саморозвитку і самопізнання"
       />
-      <Divider thin>
-        Супровід базується на використанні коучинкових технік і вправ,
-        інструментів кармічного менеджменту та духовних практик
-      </Divider>
+      <section className={styles.coachingDescription}>
+        <p>Супровід базується на використанні коучинкових технік і вправ,
+        інструментів кармічного менеджменту та духовних практик</p>
+      </section>
       <Section>
         <List title="Які результати отримали мої клієнти після супроводу:">
           <ListItem>
@@ -37,18 +37,18 @@ const Coaching = () => {
           </ListItem>
         </List>
       </Section>
-      <Divider bold>
+      <Divider>
         Запис на супровід призупинений та ви можете <br />
         стати в чергу
       </Divider>
       <Section>
         <ContactForm />
       </Section>
+      <Divider>Відгуки</Divider>
       <Section>
-        <h3 className={styles.testimonialsTitle}>Відгуки</h3>
         <SliderTestimonials data={testimonials} />
       </Section>
-      <Divider medium>Відповіді на популярні запитання</Divider>
+      <Divider>Відповіді на популярні запитання</Divider>
       <Section>
         <FAQComponent coachingPage />
       </Section>

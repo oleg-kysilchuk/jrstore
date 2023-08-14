@@ -8,10 +8,12 @@
     background-color: #FAF9F5;
     text-align: center;
     color: #000;
-    
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.4;
 }
 
-.bold {
+/* .bold {
     font-size: 38px;
     font-weight: 700;
     line-height: 1.4;
@@ -32,4 +34,4 @@
 .divider.thin > .text {
     max-width: 570px;
     line-height: 1.75;
-}
+} */

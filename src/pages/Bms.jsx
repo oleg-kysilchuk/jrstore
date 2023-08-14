@@ -69,8 +69,8 @@ const Bms = () => {
           ))}
         </div>
       </Section>
+      <Divider bold>Відгуки</Divider>
       <Section className={styles.testimonials}>
-        <h3 className={styles.testimonialsTitle}>Відгуки</h3>
         <SliderTestimonials data={bmsData.testimonials} />
       </Section>
       <Section className={styles.achievements}>
@@ -79,7 +79,9 @@ const Bms = () => {
         ))}
       </Section>
       <Divider medium>Відповіді на популярні запитання</Divider>
-      <FAQComponent bmsPage />
+      <Section>
+        <FAQComponent bmsPage />
+      </Section>
     </>
   );
 };

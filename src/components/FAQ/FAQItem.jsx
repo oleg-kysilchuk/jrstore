@@ -1,6 +1,8 @@
 import styles from "./FAQItem.module.css";
 
 const FAQItem = (props) => {
+  let open = props.open ? "open" : "";
+  
   return (
     <>
       <p
@@ -9,17 +11,34 @@ const FAQItem = (props) => {
       >
         {props.question}
       </p>
-      <p className={styles.faqAnswer + (props.open ? "open" : "")}>
+      <p
+        style={{
+          fontSize: "17px",
+          fontWeight: 400,
+          lineHeight: 1.5,
+          padding: "10px 0 0",
+          marginBottom: "30px",
+        }}
+        className={`${styles.faqAnswer}${open}`}
+      >
         {props.answer}
       </p>
       {props.lists
         ? props.lists.map((list, index) => (
             <ul
+              style={{ marginBottom: "30px" }}
               key={index}
-              className={styles.faqList + (props.open ? "open" : "")}
+              className={`${styles.faqList}${open}`}
             >
               {list.map((item, i) => (
-                <li className={styles.faqListitem} key={i}>
+                <li
+                  className={styles.faqListitem}
+                  key={i}
+                  style={{
+                    marginBottom: "7px",
+                    fontWeight: list.length !== 7 && i === 0 ? "700" : '400',  //???????????????????????
+                  }}
+                >
                   {item}
                 </li>
               ))}

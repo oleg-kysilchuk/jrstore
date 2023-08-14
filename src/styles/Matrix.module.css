@@ -1,3 +1,18 @@
+.matrix-description {
+  width: 100%;
+  padding: 35px 0;
+  max-height: 180px;
+  background-color: #FAF9F5;
+}
+
+.matrix-description p {
+  max-width: 570px;  
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.75;
+  text-align: center;
+}
+
 .guides-container {
   padding-top: 25px;
   margin: 0 auto;
@@ -18,7 +33,7 @@
 }
 
 .testimonials {
-  background-color: #faf9f5;
+  background-color: #fff;
 }
 
 .testimonials-title {

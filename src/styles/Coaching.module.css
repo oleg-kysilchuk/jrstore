@@ -1,3 +1,18 @@
+.coaching-description {
+  width: 100%;
+  padding: 35px 0;
+  max-height: 180px;
+  background-color: #FAF9F5;
+}
+
+.coaching-description p {
+  max-width: 570px;  
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.75;
+  text-align: center;
+}
+
 .testimonials-title {
   margin: 0 auto;
   text-align: center;

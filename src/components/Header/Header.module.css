@@ -4,58 +4,57 @@
   height: 80px;
   padding: 0 40px;
   font-size: 15px;
-
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999; */
-  background-color: #FDFCFA;
+  background-color: #fdfcfa;
 }
 
 .page-navigation {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav-wrap,
 .social-wrap {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .nav-wrap {
-    margin-right: 60px;
+  margin-right: 60px;
 }
 
 .nav-link {
-    display: block;
-    margin: 0 15px;
-    color: #000;
-    font-weight: 700;
+  margin: 0 15px;
+  font-weight: 700;
+  color: #000;
+}
+
+.link-active {
+  margin: 0 15px;
+  font-weight: 700;
+  color: #555;
 }
 
 .nav-link:hover {
-    color: #444;
+  color: #444;
 }
 
 .logo {
-    display: block;
-    width: 144px;
-    height: 80px;
+  display: block;
+  width: 144px;
+  height: 80px;
 }
 
 .social-link {
-    display: block;
-    margin: 0 5px;
-    width: 30px;
-    height: 30px;
+  display: block;
+  margin: 0 5px;
+  width: 30px;
+  height: 30px;
 }
 
-.social-icon:hover {
-    fill: #444;
+.social-link:hover .social-icon {
+  fill: #444;
 }

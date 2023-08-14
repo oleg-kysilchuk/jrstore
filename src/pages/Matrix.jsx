@@ -21,12 +21,12 @@ const Matrix = () => {
         title="Матриця Долі"
         text="Отримайте можливість прийняти свою силу і слабкість, зцілити самооцінку, повірити в себе і стати вільними від чужих шаблонів"
       />
-      <Divider thin>
-        Матриця Долі - унікальна система самопізнання, яка завдяки зашифрованій
+      <section className={styles.matrixDescription}>
+        <p><strong>Матриця Долі</strong> - унікальна система самопізнання, яка завдяки зашифрованій
         в даті народження інформації здатна допомогти розкрити потенціал своєї
         особистості, усвідомити кармічні задачі та призначення в різних сферах
-        життя
-      </Divider>
+        життя</p>
+      </section>
       <Section>
         <List title="Які результати отримали мої клієнти після консультації:">
           <ListItem>
@@ -53,14 +53,14 @@ const Matrix = () => {
           <ListItem>Набуття впевненості та зцілення самооцінки</ListItem>
         </List>
       </Section>
-      <Divider bold>
+      <Divider>
         Запис на індивідуальні консультації призупинений, <br /> та ви можете
         стати в чергу на розбір
       </Divider>
       <Section>
         <ContactForm />
       </Section>
-      <Divider bold>Крім консультацій</Divider>
+      <Divider>Крім консультацій</Divider>
       <Section>
         <div className={styles.guidesContainer}>
           {matrixPageData.guidesData.map((guide) => (
@@ -73,7 +73,7 @@ const Matrix = () => {
           ))}
         </div>
       </Section>
-      <Divider bold>
+      <Divider>
         Пропрацювання енергій та допомога в розкритті <br /> їх позитивного
         потенціалу
       </Divider>
@@ -90,8 +90,8 @@ const Matrix = () => {
           ))}
         </div>
       </Section>
+      <Divider>Відгуки</Divider>
       <Section className={styles.testimonials}>
-        <h3 className={styles.testimonialsTitle}>Відгуки</h3>
         <SliderTestimonials data={matrixPageData.testimonials} />
       </Section>
       <Section className={styles.achievements}>
@@ -99,7 +99,7 @@ const Matrix = () => {
           <AchievementItem key={a._id} numbers={a.numbers} text={a.text} />
         ))}
       </Section>
-      <Divider medium>Відповіді на популярні запитання</Divider>
+      <Divider>Відповіді на популярні запитання</Divider>
       <Section>
         <FAQComponent matrixPage />
       </Section>
