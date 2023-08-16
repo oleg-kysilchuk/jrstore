@@ -1,0 +1,30 @@
+.subs-section {
+  width: 100%;
+  padding: 50px 20px;
+  background-color: #faf9f5;
+  text-align: center;
+}
+
+.subs-title {
+  margin: 0 auto 40px;
+  font-size: 39px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.subs-date {
+  margin: 0 auto 50px;
+  font-size: 22px;
+}
+
+.subsitem-container {
+  margin: 0 auto 40px;
+  padding: 30px 5px;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px 15px;
+  flex-wrap: wrap;
+}

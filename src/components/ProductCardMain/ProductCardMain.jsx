@@ -1,7 +1,7 @@
 import CardButton from './CardButton';
 import styles from './ProductCardMain.module.css';
 
-const ProductCard = (props) => {
+const ProductCardMain = (props) => {
     return (
         <div className={styles.card}>
             <p className={styles.cardTitle}>{props.title}</p>
@@ -12,4 +12,4 @@ const ProductCard = (props) => {
     )
 }
 
-export default ProductCard;
+export default ProductCardMain;

@@ -1,9 +1,9 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import styles from './Slider.module.css';
+import styles from './TestimonialsSlider.module.css';
 
-const SliderTestimonials = (props) => {
+const TestimonialsSlider = (props) => {
   const sliderSettings = {
     infinite: true,
     slidesToShow: 4,
@@ -39,7 +39,7 @@ const SliderTestimonials = (props) => {
     <div className={styles.sliderContainer}>
       <Slider {...sliderSettings}>
         {props.data.map((slide) => (
-          <div className={styles.slide} key={slide._id}>
+          <div className={styles.slide} key={slide.id}>
             <img width='260' height='260' src={slide.src} alt={slide.alt} />
           </div>
         ))}
@@ -48,4 +48,4 @@ const SliderTestimonials = (props) => {
   );
 };
 
-export default SliderTestimonials;
+export default TestimonialsSlider;

@@ -1,6 +1,7 @@
-export const subscriptionsInfo = [
+import generateId from "./IDGenerator";
+
+const subscriptionsInfo = [
   {
-    _id: Math.random(),
     src: "/src/assets/bms-sub/1.png",
     title: "Пропрацювання другої чакри",
     listTitle:
@@ -22,248 +23,203 @@ export const subscriptionsInfo = [
     text: "Ви отримаєте теоретичні матеріали, і практичні завдання-протоколи на 40 днів (кожні 10 днів оновлений протокол)",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/bms-sub/2.png",
     title: "Нейрографіка",
     text: "Разом з провідником, сертифікованим спеціалістом з Нейрографіки, ми будемо виконувати практику, присвячену темі Свадхістани",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/bms-sub/3.png",
     title: "Послання Богинь",
     text: "Підказка від карт-оракулів у перші дні вашого циклу",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/bms-sub/4.png",
     title: "База знань",
     text: "За попередні 30 місяців роботи Be My Sister у нас накопичилася величезна кількість матеріалів, які ви зможете прослухати та переглянути у зручний для вас час. Це і ефіри на різні теми, і записи практик з МАК, і подкасти та посібники",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/bms-sub/5.png",
     title: "Карта тижня",
     text: "Завдяки моїй роботі з колодами карт-оракулів та таро ви отримуватимете послання раз на тиждень",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/bms-sub/6.png",
     title: "Чат для спілкування з учасницями",
     text: "У чаті ми не маємо пустих розмов і флуду. Ми спілкуємося тільки на важливі теми, і не відволікатимемо вас від життя непотрібними повідомленнями. Чат створено у телеграмі",
   },
 ];
 
-export const bonusOptions = [
+const bonusOptions = [
   {
-    _id: Math.random(),
     src: "/src/assets/bms-sub/7-1.png",
     title: "Карма-маніфест",
     text: "Подкасти та посібник про 10 етичних принципів, а також роз'яснення, що таке карма-маніфест. Теоретичні матеріали для самостійного вивчення і опрацювання. Через щоденний звіт-щоденник ви звіряєтесь, чи вірно ви маніфестуєте своє бажане майбутнє в простір",
   },
 ];
 
-export const subscriptionsData = [
+const subscriptions = [
   {
-    _id: Math.random(),
     title: "Основна программа на ????",
     price: 450,
   },
   {
-    _id: Math.random(),
     title: "Основна программа + карма маніфест на ????",
     price: 600,
   },
 ];
 
-export const testimonials = [
+const testimonials = [
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-1.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-2.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-3.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-4.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-5.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-6.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-7.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-8.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-9.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-10.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-11.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-12.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-13.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-14.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-15.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-16.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-17.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-18.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-19.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-20.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-21.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-22.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-23.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-24.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-25.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-26.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-27.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-28.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-29.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-30.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-31.jpg",
     alt: "review",
   },
   {
-    _id: Math.random(),
     src: "/src/assets/slides-bms/slide-32.jpg",
     alt: "review",
   },
 ];
 
-export const achievements = [
+const achievements = [
   {
-    _id: Math.random(),
     numbers: 31,
     text: "місяців працює спільнота",
   },
   {
-    _id: Math.random(),
     numbers: 203,
     text: "жінки стали учасницями спільноти",
   },
   {
-    _id: Math.random(),
     numbers: "70%",
     text: "учасниць продовжили підписку повторно",
   },
   {
-    _id: Math.random(),
     numbers: "17 / 50",
     text: "вік наймолодшої та найстаршої учасниць на момент входу до спільноти",
   },
 ];
 
-export const faqQuestions = [
+const faqQuestions = [
   {
-    _id: Math.random(),
     question: "Що входить до бази відео-матеріалів попередніх сезонів?",
     answer:
       "70+ ефірів та практик у записі, а також гайди та чек-листи (більшість російською мовою, матеріали від 24.02 - українською).",
@@ -372,16 +328,14 @@ export const faqQuestions = [
     open: false,
   },
   {
-    _id: Math.random(),
     question: "А спілкуватися обов'язково?",
     answer:
       "Спілкування – це лише одна із форм прояву Be My Sister. Якщо вам не подобається спілкуватися, можете просто помовчати в нашому ресурсному полі. Ми не вимагаємо, щоб на жіночих колах були включені камери, ви можете просто «тихо бути присутньою». Головна цінність проекту Be My Siser – можливість прийти сюди за своїм видом взаємодії. Для когось це – спілкування, для когось – розклад, для когось – знання. Вибирайте те, що цінне для вас",
     open: false,
   },
   {
-    _id: Math.random(),
     question: "Що мені дасть участь у спільноті?",
-    answer: 'sdgssh',
+    answer: "sdgssh",
     lists: [
       [
         "Можливість познайомитися з близькими за духом жінками, які цікавляться такими ж психологічно-езотеричними темами, що і ви",
@@ -396,3 +350,33 @@ export const faqQuestions = [
     open: false,
   },
 ];
+
+export const subscriptionsInfoData = subscriptionsInfo.map((item) => ({
+  ...item,
+  id: generateId(),
+}));
+
+export const bonusData = bonusOptions.map((item) => ({
+  ...item,
+  id: generateId(),
+}));
+
+export const subscriptionsData = subscriptions.map((item) => ({
+  ...item,
+  id: generateId(),
+}));
+
+export const testimonialsData = testimonials.map((item) => ({
+  ...item,
+  id: generateId(),
+}));
+
+export const achievementsData = achievements.map((item) => ({
+  ...item,
+  id: generateId(),
+}));
+
+export const faqQuestionsData = faqQuestions.map((item) => ({
+  ...item,
+  id: generateId(),
+}));

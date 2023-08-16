@@ -16,37 +16,6 @@
   font-weight: 800;
 }
 
-.subscription-section {
-  width: 100%;
-  padding: 50px 20px;
-  background-color: #faf9f5;
-  text-align: center;
-}
-
-.subscription-title {
-  margin: 0 auto 40px;
-  font-size: 39px;
-  font-weight: 700;
-  text-align: center;
-}
-
-.subscription-date {
-  margin: 0 auto 50px;
-  font-size: 22px;
-}
-
-.subscription-container {
-  margin: 0 auto 40px;
-  padding: 30px 5px;
-  max-width: 1200px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 40px 15px;
-  flex-wrap: wrap;
-}
-
 .testimonials {
   background-color: #fff;
 }
@@ -58,29 +27,3 @@
   font-weight: 700;
   margin-bottom: 90px;
 }
-
-.achievements {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: 40px;
-}
-
-/* .divider {
-    width: 100%;
-    min-height: 170px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #fff;
-} */
-
-/* .divider-title {
-    margin: 0 auto;
-    text-align: center;
-    font-size: 42px;
-    font-weight: 700;
-} */

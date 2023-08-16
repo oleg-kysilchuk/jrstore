@@ -1,12 +1,12 @@
-import HomeLinkCard from "../components/HomeLinkCard/HomeLinkCard";
-import imgAbout from "../assets/photo-julia.jpg";
-import styles from "../styles/Home.module.css";
 import Section from "../components/UI/Section/Section";
+import HomeLinkCard from "../components/HomeLinkCard/HomeLinkCard";
+import styles from "../styles/Home.module.css";
+import imgAbout from "../assets/photo-julia.jpg";
 
 const Home = () => {
   return (
     <>
-      <Section className={styles.linksContainer}>
+      <Section className={styles.homeLinks}>
         <h1 className={styles.mainTitle}>Точки нашого дотику:</h1>
         <div className={styles.services}>
           <HomeLinkCard to="/matrix" title="Матриця Долі" />

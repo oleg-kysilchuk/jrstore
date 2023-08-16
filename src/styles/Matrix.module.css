@@ -5,7 +5,7 @@
   background-color: #FAF9F5;
 }
 
-.matrix-description p {
+.description-text {
   max-width: 570px;  
   margin: 0 auto;
   font-size: 16px;
@@ -42,13 +42,4 @@
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 90px;
-}
-
-.achievements {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: 40px;
 }

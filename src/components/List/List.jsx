@@ -4,7 +4,13 @@ const List = (props) => {
   return (
     <div className={styles.listWrap}>
       <h3 className={styles.listTitle}>{props.title}</h3>
-      <ul>{props.children}</ul>
+      <ul>
+        {props.data.map((item) => (
+          <li key={item.id} className={styles.listItem}>
+            {item.text}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

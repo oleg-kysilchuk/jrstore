@@ -1,17 +1,16 @@
 import SectionParallax from "../components/UI/SectionParallax/SectionParallax";
 import Divider from "../components/UI/Divider/Divider";
 import ContactForm from "../components/Forms/ContactForm";
-import bgImg from "../assets/matrix-bg.jpg";
-import styles from "../styles/Matrix.module.css";
 import ProductCardMain from "../components/ProductCardMain/ProductCardMain";
 import ProductCardSecondary from "../components/ProductCardSecondary/ProductCardSecondary";
-import SliderTestimonials from "../components/Slider/Slider";
-import AchievementItem from "../components/AchievementItem/AchievementItem";
+import TestimonialsSlider from "../components/Slider/TestimonialsSlider";
+import Achievements from "../components/Achievements/Achievements";
 import FAQComponent from "../components/FAQ/FAQComponent";
 import Section from "../components/UI/Section/Section";
 import List from "../components/List/List";
-import ListItem from "../components/List/ListItem";
 import * as matrixPageData from "../components/util/matrixPage-data";
+import bgImg from "../assets/matrix-bg.jpg";
+import styles from "../styles/Matrix.module.css";
 
 const Matrix = () => {
   return (
@@ -22,36 +21,13 @@ const Matrix = () => {
         text="Отримайте можливість прийняти свою силу і слабкість, зцілити самооцінку, повірити в себе і стати вільними від чужих шаблонів"
       />
       <section className={styles.matrixDescription}>
-        <p><strong>Матриця Долі</strong> - унікальна система самопізнання, яка завдяки зашифрованій
+        <p className={styles.descriptionText}><strong>Матриця Долі</strong> - унікальна система самопізнання, яка завдяки зашифрованій
         в даті народження інформації здатна допомогти розкрити потенціал своєї
         особистості, усвідомити кармічні задачі та призначення в різних сферах
         життя</p>
       </section>
       <Section>
-        <List title="Які результати отримали мої клієнти після консультації:">
-          <ListItem>
-            Набуття стану ясності та розслаблення через розуміння себе та тих
-            процесів, що відбуваються в житті
-          </ListItem>
-          <ListItem>
-            Усвідомлення того, куди рухатися далі, та віра, що все вийде
-          </ListItem>
-          <ListItem>
-            Збільшення доходу в кілька разів, покращення якості життя
-          </ListItem>
-          <ListItem>
-            Поліпшення відносин із партнером, перезавантаження сфери відносин
-          </ListItem>
-          <ListItem>
-            Прийняття себе, налагодження контакту з собою, усвідомлення своєї
-            сили та «тіні»
-          </ListItem>
-          <ListItem>Набуття улюбленої справи, нової професії</ListItem>
-          <ListItem>
-            Поліпшення стосунків з батьками, відпускання образ
-          </ListItem>
-          <ListItem>Набуття впевненості та зцілення самооцінки</ListItem>
-        </List>
+        <List title="Які результати отримали мої клієнти після консультації:" data={matrixPageData.listItemsData} />
       </Section>
       <Divider>
         Запис на індивідуальні консультації призупинений, <br /> та ви можете
@@ -65,8 +41,8 @@ const Matrix = () => {
         <div className={styles.guidesContainer}>
           {matrixPageData.guidesData.map((guide) => (
             <ProductCardMain
-              key={guide._id}
-              id={guide._id}
+              key={guide.id}
+              id={guide.id}
               title={guide.title}
               price={guide.price}
             />
@@ -81,8 +57,8 @@ const Matrix = () => {
         <div className={styles.correctionsContainer}>
           {matrixPageData.correctionsData.map((correction) => (
             <ProductCardSecondary
-              key={correction._id}
-              id={correction._id}
+              key={correction.id}
+              id={correction.id}
               title={correction.title}
               description={correction.description}
               price={correction.price}
@@ -92,13 +68,9 @@ const Matrix = () => {
       </Section>
       <Divider>Відгуки</Divider>
       <Section className={styles.testimonials}>
-        <SliderTestimonials data={matrixPageData.testimonials} />
+        <TestimonialsSlider data={matrixPageData.testimonialsData} />
       </Section>
-      <Section className={styles.achievements}>
-        {matrixPageData.achievements.map((a) => (
-          <AchievementItem key={a._id} numbers={a.numbers} text={a.text} />
-        ))}
-      </Section>
+      <Achievements data={matrixPageData.achievementsData} />
       <Divider>Відповіді на популярні запитання</Divider>
       <Section>
         <FAQComponent matrixPage />
