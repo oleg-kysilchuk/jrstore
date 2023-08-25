@@ -1,0 +1,91 @@
+.section-heading {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../assets/ezo-bg.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.section-mask {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.title-white {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.section-pink {
+  width: 100%;
+  padding: 30px 20px;
+  background-color: #f4e3c5;
+}
+
+.svg-icon {
+  display: block;
+  margin: 0 auto;
+}
+
+.sectionpink-text {
+  margin: 50px auto;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.section-info {
+  width: 100%;
+  padding: 30px 0;
+  background-color: #f4e3c5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.items-container {
+  width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 20px 0px;
+}
+
+.info-item {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  gap: 0 20px;
+  padding: 40px 30px 55px 40px;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid rgb(238, 238, 238);
+  border-radius: 10px;
+}
+
+.item-question {
+  width: 120px;
+  font-weight: 800;
+  line-height: 1.6;
+  color: #757575;
+}
+
+.item-text {
+  font-size: 15px;
+  font-weight: 300;
+}

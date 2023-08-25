@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
+import Layout from "../components/layout/Layout";
 import Home from "../pages/Home";
 import Matrix from "../pages/Matrix";
 import Bms from "../pages/Bms";
 import Coaching from "../pages/Coaching";
 import Products from "../pages/Products";
-import Layout from "../components/layout/Layout";
+import Esoteric from "../pages/Esoteric";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
         element: <Products />,
       },
     ],
+  },
+  {
+    path: "/esoteric",
+    element: <Esoteric />,
   },
 ]);
 

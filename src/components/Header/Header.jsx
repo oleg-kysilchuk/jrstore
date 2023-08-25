@@ -33,6 +33,9 @@ const Header = () => {
             } to="/products">
             В записі
           </NavLink>
+          <NavLink className={styles.navLink} to='/esoteric'>
+            Esoteric
+          </NavLink>
         </div>
         <div className={styles.socialWrap}>
           <a className={styles.socialLink} href="" target="_blank">

@@ -58,14 +58,14 @@ const testimonials = [
 
 export const listItemsData = listItems.map((item) => ({
   ...item,
-  id: generateId,
+  id: generateId(),
 }));
 
 export const faqQuestionsData = faqQuestions.map((item) => ({
   ...item,
-  id: generateId,
+  id: generateId(),
 }));
 export const testimonialsData = testimonials.map((item) => ({
   ...item,
-  id: generateId,
+  id: generateId(),
 }));

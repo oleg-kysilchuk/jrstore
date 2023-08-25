@@ -4,7 +4,7 @@ import styles from "./Subscriptions.module.css";
 
 const SubscriptionOffers = () => {
   return (
-    <section className={styles.subsSection}>
+    <section className={styles.subsoffersSection}>
       <h2 className={styles.subsTitle}>Оформити підписку</h2>
       <div className={styles.subsitemContainer}>
         {subscriptionsData.map((sub) => (

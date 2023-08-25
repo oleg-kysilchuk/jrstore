@@ -1,0 +1,20 @@
+.product-button {
+    margin: 0 auto;
+    width: 125px;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    background-color: #13ce66;
+    border-radius: 30px;
+}
+
+.product-button:hover,
+.product-button:focus {
+    background-color: #fff;
+    color: #13ce66;
+    border: 1px solid #13ce66;
+}
+
+.product-button:active {
+    transform: scale(0.97);
+}

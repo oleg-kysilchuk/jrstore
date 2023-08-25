@@ -1,0 +1,35 @@
+.card-item {
+  margin: 0 auto;
+  padding: 50px 0;
+  width: 360px;
+  height: 414px;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+.item-image {
+  margin: 0 auto;
+  height: auto;
+  max-width: 100px;
+  margin-bottom: 35px;
+}
+
+.item-title {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 21px;
+  font-weight: 800;
+  margin-bottom: 60px;
+}
+
+.card-item:first-of-type .item-title {
+  margin-bottom: 30px;
+}
+
+.item-text {
+  width: 92%;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+}
