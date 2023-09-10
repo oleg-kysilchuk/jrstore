@@ -22,7 +22,7 @@ const Coaching = () => {
         інструментів кармічного менеджменту та духовних практик</p>
       </section>
       <Section>
-        <List title="Які результати отримали мої клієнти після супроводу:" data={coachingPageData.listItemsData} />
+        <List title="Які результати отримали мої клієнти після супроводу:" data={coachingPageData.listItems} />
       </Section>
       <Divider>
         Запис на супровід призупинений та ви можете <br />
@@ -33,7 +33,7 @@ const Coaching = () => {
       </Section>
       <Divider>Відгуки</Divider>
       <Section>
-        <SliderTestimonials data={coachingPageData.testimonialsData} />
+        <SliderTestimonials data={coachingPageData.testimonials} />
       </Section>
       <Divider>Відповіді на популярні запитання</Divider>
       <Section>

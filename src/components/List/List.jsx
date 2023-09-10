@@ -5,8 +5,8 @@ const List = (props) => {
     <div className={styles.listWrap}>
       <h3 className={styles.listTitle}>{props.title}</h3>
       <ul>
-        {props.data.map((item) => (
-          <li key={item.id} className={styles.listItem}>
+        {props.data.map((item, index) => (
+          <li key={`${index}${item.text}`} className={styles.listItem}>
             {item.text}
           </li>
         ))}

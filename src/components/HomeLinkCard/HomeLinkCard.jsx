@@ -7,12 +7,7 @@ const HomepageCard = (props) => {
     <div>
       <h2 className={styles.cardTitle}>{props.title}</h2>
       <NavLink to={props.to}>
-        <ButtonLink
-          type="button"
-          onClick={() => console.log("details button from home page")}
-        >
-          Детальніше
-        </ButtonLink>
+        <ButtonLink type="button">Детальніше</ButtonLink>
       </NavLink>
     </div>
   );

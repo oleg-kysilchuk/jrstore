@@ -1,6 +1,4 @@
-import generateId from "./IDGenerator";
-
-const subscriptionsInfo = [
+export const subscriptionsInfo = [
   {
     src: "/src/assets/bms-sub/1.png",
     title: "Пропрацювання другої чакри",
@@ -49,7 +47,7 @@ const subscriptionsInfo = [
   },
 ];
 
-const bonusOptions = [
+export const bonusOptions = [
   {
     src: "/src/assets/bms-sub/7-1.png",
     title: "Карма-маніфест",
@@ -57,18 +55,7 @@ const bonusOptions = [
   },
 ];
 
-const subscriptions = [
-  {
-    title: "Основна программа на ????",
-    price: 450,
-  },
-  {
-    title: "Основна программа + карма маніфест на ????",
-    price: 600,
-  },
-];
-
-const testimonials = [
+export const testimonials = [
   {
     src: "/src/assets/slides-bms/slide-1.jpg",
     alt: "review",
@@ -199,7 +186,7 @@ const testimonials = [
   },
 ];
 
-const achievements = [
+export const achievements = [
   {
     numbers: 31,
     text: "місяців працює спільнота",
@@ -218,8 +205,9 @@ const achievements = [
   },
 ];
 
-const faqQuestions = [
+export const faqQuestions = [
   {
+    id: 'bmspagefaqdata01',
     question: "Що входить до бази відео-матеріалів попередніх сезонів?",
     answer:
       "70+ ефірів та практик у записі, а також гайди та чек-листи (більшість російською мовою, матеріали від 24.02 - українською).",
@@ -328,12 +316,14 @@ const faqQuestions = [
     open: false,
   },
   {
+    id: 'bmspagefaqdata02',
     question: "А спілкуватися обов'язково?",
     answer:
       "Спілкування – це лише одна із форм прояву Be My Sister. Якщо вам не подобається спілкуватися, можете просто помовчати в нашому ресурсному полі. Ми не вимагаємо, щоб на жіночих колах були включені камери, ви можете просто «тихо бути присутньою». Головна цінність проекту Be My Siser – можливість прийти сюди за своїм видом взаємодії. Для когось це – спілкування, для когось – розклад, для когось – знання. Вибирайте те, що цінне для вас",
     open: false,
   },
   {
+    id: 'bmspagefaqdata03',
     question: "Що мені дасть участь у спільноті?",
     answer: "sdgssh",
     lists: [
@@ -350,33 +340,3 @@ const faqQuestions = [
     open: false,
   },
 ];
-
-export const subscriptionsInfoData = subscriptionsInfo.map((item) => ({
-  ...item,
-  id: generateId(),
-}));
-
-export const bonusData = bonusOptions.map((item) => ({
-  ...item,
-  id: generateId(),
-}));
-
-export const subscriptionsData = subscriptions.map((item) => ({
-  ...item,
-  id: generateId(),
-}));
-
-export const testimonialsData = testimonials.map((item) => ({
-  ...item,
-  id: generateId(),
-}));
-
-export const achievementsData = achievements.map((item) => ({
-  ...item,
-  id: generateId(),
-}));
-
-export const faqQuestionsData = faqQuestions.map((item) => ({
-  ...item,
-  id: generateId(),
-}));

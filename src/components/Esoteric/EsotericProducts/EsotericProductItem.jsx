@@ -7,7 +7,7 @@ const EsotericProductItem = (props) => {
             <p className={styles.itemTitle}>{props.title}</p>
             <p className={styles.itemText}>{props.text}</p>
             <p className={styles.itemPrice}>{props.price} грн</p>
-            <EsotericProductButton>{props.buttonText}</EsotericProductButton>
+            <EsotericProductButton>{props.inStock ? 'Замовити' : 'Продано!'}</EsotericProductButton>
         </div>
     )
 }

@@ -1,0 +1,52 @@
+.list {
+  position: relative;
+  margin-bottom: 40px;
+  width: 27%;
+}
+
+.list:nth-of-type(1n) {
+  align-self: flex-start;
+  text-align: right;
+  margin-left: 18%;
+}
+
+.list:nth-of-type(2n) {
+  align-self: flex-end;
+  text-align: left;
+  margin-right: 18%;
+}
+
+.list:nth-of-type(1n) > .item-label {
+  right: -25.2%;
+}
+
+.list:nth-of-type(2n) > .item-label {
+  left: -25.6%;
+}
+
+.item-label {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 45px;
+  background-color: #222;
+  border-radius: 50%;
+  top: -10px;
+  color: #fff;
+  font-size: 23px;
+  text-align: center;
+  padding-top: 7px;
+  z-index: 1;
+}
+
+.list-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.list-item {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.65;
+}

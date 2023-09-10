@@ -8,6 +8,7 @@ const TestimonialsSlider = (props) => {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
+    autoplay: true,
     arrows: false,
     responsive: [
       {
@@ -38,8 +39,8 @@ const TestimonialsSlider = (props) => {
   return (
     <div className={styles.sliderContainer}>
       <Slider {...sliderSettings}>
-        {props.data.map((slide) => (
-          <div className={styles.slide} key={slide.id}>
+        {props.data.map((slide, index) => (
+          <div className={styles.slide} key={`${index}${slide.src}`}>
             <img width='260' height='260' src={slide.src} alt={slide.alt} />
           </div>
         ))}

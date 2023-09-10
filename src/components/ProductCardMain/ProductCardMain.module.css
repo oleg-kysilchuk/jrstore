@@ -1,10 +1,13 @@
 .card {
     margin: 0 auto;
+    max-width: 33%;
     text-align: center;
 }
 
 .card-title {
-    margin-bottom: 20px;
+    width: 80%;
+    margin: 0 auto 20px;
     font-size: 18px;
     font-weight: 800;
+    line-height: 1.6;
 }

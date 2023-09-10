@@ -7,9 +7,9 @@ const EsoreticCardsSmall = (props) => {
     <Section>
       <h3 className={styles.cardsTitle}>{props.title}</h3>
       <div className={styles.cardsContainer}>
-        {props.data.map((item) => (
+        {props.data.map((item, index) => (
           <EsotericCardSmallItem
-            key={item.id}
+            key={`${index}${item.title}`}
             src={item.src}
             title={item.title}
             text={item.text}

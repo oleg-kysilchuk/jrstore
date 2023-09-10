@@ -2,8 +2,8 @@ import SectionParallax from "../components/UI/SectionParallax/SectionParallax";
 import Divider from "../components/UI/Divider/Divider";
 import ProductCardMain from "../components/ProductCardMain/ProductCardMain";
 import Section from "../components/UI/Section/Section";
-import { readProductsData as productsWatch } from "../components/util/productsPage-data";
-import { guidesData as productsRead } from "../components/util/matrixPage-data";
+import { watchProducts as productsWatch } from "../components/util/products-data";
+import { guides as productsRead } from "../components/util/products-data";
 import bgImg from "../assets/products-bg.jpg";
 import styles from "../styles/Products.module.css";
 
@@ -18,25 +18,27 @@ const Products = () => {
       <Divider>ДИВИТИСЬ ТА СЛУХАТИ:</Divider>
       <Section>
         <div className={styles.productsContainer}>
-          {productsWatch.map((prod) => (
+          {productsWatch.map((item) => (
             <ProductCardMain
-              key={prod.id}
-              id={prod.id}
-              title={prod.title}
-              price={prod.price}
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              price={item.price}
+              details={item.details}
             />
           ))}
         </div>
       </Section>
-      <Divider bold>ЧИТАТИ:</Divider>
+      <Divider>ЧИТАТИ:</Divider>
       <Section>
         <div className={styles.productsContainer}>
-          {productsRead.map((prod) => (
+          {productsRead.map((item) => (
             <ProductCardMain
-              key={prod._id}
-              id={prod._id}
-              title={prod.title}
-              price={prod.price}
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              price={item.price}
+              details={item.details}
             />
           ))}
         </div>

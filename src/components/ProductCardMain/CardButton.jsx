@@ -17,7 +17,7 @@ const CardButton = (props) => {
     }
 
     return (
-        <button className={style} type="button">{props.children}</button>
+        <button className={style} onClick={props.onClick} type="button">{props.children}</button>
     )
 }
 

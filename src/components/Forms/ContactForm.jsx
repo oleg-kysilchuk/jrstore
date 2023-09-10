@@ -1,6 +1,6 @@
 import styles from "./ContactForm.module.css";
 
-const Form = () => {
+const Form = (props) => {
   return (
     <div className={styles.formContainer}>
       <form className={styles.form}>
@@ -23,6 +23,19 @@ const Form = () => {
             </label>
             <input className={styles.formInput} id="instagram" type="text" />
           </div>
+          {props.workshop && (
+            <div className={styles.formAction}>
+              <label className={styles.formLabel} htmlFor="workshop">
+                Воркшоп, який хочете замовити
+              </label>
+              <input
+                className={styles.formInput}
+                id="workshop"
+                type="number"
+                placeholder="№"
+              />
+            </div>
+          )}
         </div>
         <div className={styles.formControls}>
           <button className={styles.formBtn} type="submit">

@@ -1,18 +1,17 @@
 import SubscriptionItem from "./SubscriptionItem";
 import styles from "./Subscriptions.module.css";
-import { subscriptionsInfoData } from "../util/bmsPage-data";
-import { bonusData } from "../util/bmsPage-data";
+import { subscriptionsInfo, bonusOptions } from "../util/bmsPage-data";
+import { date } from "../util/currentDate";
 
 const Subscriptions = () => {
   return (
     <section className={styles.subsSection}>
       <h2 className={styles.subsTitle}>Що входить в підписку</h2>
-      <p className={styles.subsDate}>на місяць? 202?</p>
+      <p className={styles.subsDate}>на {date.currentMonth} {date.currentYear}</p>
       <div className={styles.subsitemContainer}>
-        {subscriptionsInfoData.map((item) => (
+        {subscriptionsInfo.map((item, index) => (
           <SubscriptionItem
-            key={item.id}
-            id={item.id}
+            key={`${index}${item.title}`}
             src={item.src}
             title={item.title}
             list={item.list}
@@ -23,10 +22,9 @@ const Subscriptions = () => {
       </div>
       <h2 className={styles.subsTitle}>Додаткова опція:</h2>
       <div className={styles.subsitemContainer}>
-        {bonusData.map((item) => (
+        {bonusOptions.map((item, index) => (
           <SubscriptionItem
-            key={item.id}
-            id={item.id}
+            key={`${index}${item.title}`}
             src={item.src}
             title={item.title}
             text={item.text}

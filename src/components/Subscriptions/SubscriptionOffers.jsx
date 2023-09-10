@@ -1,18 +1,17 @@
 import ProductCardMain from "../ProductCardMain/ProductCardMain";
-import { subscriptionsData } from "../util/bmsPage-data";
 import styles from "./Subscriptions.module.css";
 
-const SubscriptionOffers = () => {
+const SubscriptionOffers = (props) => {
   return (
     <section className={styles.subsoffersSection}>
       <h2 className={styles.subsTitle}>Оформити підписку</h2>
       <div className={styles.subsitemContainer}>
-        {subscriptionsData.map((sub) => (
+        {props.data.map((item) => (
           <ProductCardMain
-            key={sub.id}
-            id={sub.id}
-            title={sub.title}
-            price={sub.price}
+            key={item.id}
+            id={item.id}
+            title={item.title}
+            price={item.price}
           />
         ))}
       </div>

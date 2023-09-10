@@ -1,9 +1,10 @@
 import FAQItem from "./FAQItem";
 import styles from "./FAQComponent.module.css";
 import { useState } from "react";
-import { faqQuestionsData as matrixPageFaq } from "../util/matrixPage-data";
-import { faqQuestionsData as coachingFaq } from "../util/coachingPage-data";
-import { faqQuestionsData as bmsFaq } from "../util/bmsPage-data";
+import { faqQuestions as matrixPageFaq } from "../util/matrixPage-data";
+import { faqQuestions as coachingFaq } from "../util/coachingPage-data";
+import { faqQuestions as bmsFaq } from "../util/bmsPage-data";
+import { faqQuestionsWorkshop1 as workshop1Faq } from "../util/workshops-data";
 
 const FAQComponent = (props) => {
   const [faqs, setFaqs] = useState(props.matrixPage ? matrixPageFaq : (props.coachingPage ? coachingFaq : bmsFaq));

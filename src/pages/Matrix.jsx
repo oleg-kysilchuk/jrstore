@@ -2,12 +2,12 @@ import SectionParallax from "../components/UI/SectionParallax/SectionParallax";
 import Divider from "../components/UI/Divider/Divider";
 import ContactForm from "../components/Forms/ContactForm";
 import ProductCardMain from "../components/ProductCardMain/ProductCardMain";
-import ProductCardSecondary from "../components/ProductCardSecondary/ProductCardSecondary";
 import TestimonialsSlider from "../components/Slider/TestimonialsSlider";
 import Achievements from "../components/Achievements/Achievements";
 import FAQComponent from "../components/FAQ/FAQComponent";
 import Section from "../components/UI/Section/Section";
 import List from "../components/List/List";
+import { guides } from "../components/util/products-data";
 import * as matrixPageData from "../components/util/matrixPage-data";
 import bgImg from "../assets/matrix-bg.jpg";
 import styles from "../styles/Matrix.module.css";
@@ -27,7 +27,7 @@ const Matrix = () => {
         життя</p>
       </section>
       <Section>
-        <List title="Які результати отримали мої клієнти після консультації:" data={matrixPageData.listItemsData} />
+        <List title="Які результати отримали мої клієнти після консультації:" data={matrixPageData.listItems} />
       </Section>
       <Divider>
         Запис на індивідуальні консультації призупинений, <br /> та ви можете
@@ -39,12 +39,13 @@ const Matrix = () => {
       <Divider>Крім консультацій</Divider>
       <Section>
         <div className={styles.guidesContainer}>
-          {matrixPageData.guidesData.map((guide) => (
+          {guides.map((guide) => (
             <ProductCardMain
               key={guide.id}
               id={guide.id}
               title={guide.title}
               price={guide.price}
+              details={guide.details}
             />
           ))}
         </div>
@@ -53,9 +54,9 @@ const Matrix = () => {
         Пропрацювання енергій та допомога в розкритті <br /> їх позитивного
         потенціалу
       </Divider>
-      <Section>
+      {/* <Section>
         <div className={styles.correctionsContainer}>
-          {matrixPageData.correctionsData.map((correction) => (
+          {corrections.map((correction) => (
             <ProductCardSecondary
               key={correction.id}
               id={correction.id}
@@ -65,12 +66,12 @@ const Matrix = () => {
             />
           ))}
         </div>
-      </Section>
+      </Section> */}
       <Divider>Відгуки</Divider>
       <Section className={styles.testimonials}>
-        <TestimonialsSlider data={matrixPageData.testimonialsData} />
+        <TestimonialsSlider data={matrixPageData.testimonials} />
       </Section>
-      <Achievements data={matrixPageData.achievementsData} />
+      <Achievements data={matrixPageData.achievements} />
       <Divider>Відповіді на популярні запитання</Divider>
       <Section>
         <FAQComponent matrixPage />

@@ -10,10 +10,11 @@ const EsotericProducts = (props) => {
         {props.data.map((item) => (
           <EsotericProductItem
             key={item.id}
+            id={item.id}
             title={item.title}
             text={item.text}
             price={item.price}
-            buttonText={item.buttonText}
+            inStock={item.inStock}
           />
         ))}
       </div>

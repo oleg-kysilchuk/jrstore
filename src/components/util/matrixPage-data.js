@@ -1,6 +1,4 @@
-import generateId from "./IDGenerator";
-
-const listItems = [
+export const listItems = [
   {
     text: "Набуття стану ясності та розслаблення через розуміння себе та тих процесів, що відбуваються в житті",
   },
@@ -27,65 +25,7 @@ const listItems = [
   },
 ];
 
-const guides = [
-  {
-    title: 'Ґайд "Значення точок Матриці"',
-    price: 300,
-  },
-  {
-    title: 'Методичка "22 Енергії"',
-    price: 600,
-  },
-  {
-    title: 'Канал "Матриціологія"',
-    price: 1000,
-  },
-];
-
-const corrections = [
-  {
-    title: "Аромакорекція 3 енергії",
-    description: "Мікс 3: Імператриця",
-    price: 280,
-  },
-  {
-    title: "Аромакорекція 6 енергії",
-    description: "Мікс 6: Любов",
-    price: 300,
-  },
-  {
-    title: "Аромакорекція 7 енергії",
-    description: "Мікс 7: Воїн",
-    price: 290,
-  },
-  {
-    title: "Аромакорекція 10 енергії",
-    description: "Мікс 10: Фортуна",
-    price: 290,
-  },
-  {
-    title: "Аромакорекція 12 енергії",
-    description: "Мікс 12: Служіння",
-    price: 300,
-  },
-  {
-    title: "Аромакорекція 15 енергії",
-    description: "Мікс 15: Темний Ангел",
-    price: 310,
-  },
-  {
-    title: "Аромакорекція 18 енергії",
-    description: "Мікс 18: Місяць",
-    price: 320,
-  },
-  {
-    title: "Настройка-медитація",
-    description: "на енергію",
-    price: 550,
-  },
-];
-
-const testimonials = [
+export const testimonials = [
   {
     src: "/src/assets/slides-matrix/slide-1.jpg",
     alt: "review",
@@ -328,7 +268,7 @@ const testimonials = [
   },
 ];
 
-const achievements = [
+export const achievements = [
   {
     numbers: 334,
     text: "проведено консультацій",
@@ -343,20 +283,23 @@ const achievements = [
   },
 ];
 
-const faqQuestions = [
+export const faqQuestions = [
   {
+    id: 'matrixpagefaqdata01',
     question: "Як я можу бути впевненим, що метод працює?",
     answer:
       "Консультації за методом Матриця Долі пройшли вже сотні тисяч, а то й мільйони людей у всьому світі. Метод підтверджений статистично. Щодо моєї практики, 100% клієнтів, які приходили до мене на консультацію, підтверджували, що інформація, яку ми обговорювали, має підтвердження у їхньому житті. Я не пропоную мені повірити на слово. Я пропоную перевірити це на практиці.",
     open: false,
   },
   {
+    id: 'matrixpagefaqdata02',
     question: "Чи змінить консультація моє життя на краще?",
     answer:
       "Консультація здатна підсвітити ваші точки росту, діагностувати проблемні місця. Знаючи, з чим ви маєте працювати і на що звернути увагу, ви зможете поступово трансформувати свої програми самостійно або за допомогою інших фахівців. Сама по собі консультація не працює, працюєте ви.",
     open: false,
   },
   {
+    id: 'matrixpagefaqdata03',
     question:
       "Чи можна отримати консультацію через текст чи аудіо, без дзвінка?",
     answer:
@@ -364,12 +307,14 @@ const faqQuestions = [
     open: false,
   },
   {
+    id: 'matrixpagefaqdata04',
     question: "А що якщо у мене не буде результатів?",
     answer:
       "На консультації ми засіємо зерно, і рано чи пізно воно проросте. Ви інвестуєте у вивчення себе, своїх кармічних завдань час та гроші, і це так чи інакше дасть свої величезні плоди. Залежно від того, наскільки ви будете усвідомлені, включені в роботу після консультації, і який ваш поточний рівень, швидкість отримання результатів може бути різною. Але якщо робити доступний мінімум – все буде добре.",
     open: false,
   },
   {
+    id: 'matrixpagefaqdata05',
     question:
       "Що робити, якщо у мене виникнуть питання через деякий час після консультації?",
     answer:
@@ -377,33 +322,3 @@ const faqQuestions = [
     open: false,
   },
 ];
-
-export const listItemsData = listItems.map((item) => ({
-  ...item,
-  id: generateId(),
-}));
-
-export const guidesData = guides.map((item) => ({
-  ...item,
-  id: generateId(),
-}));
-
-export const correctionsData = corrections.map((item) => ({
-  ...item,
-  id: generateId(),
-}));
-
-export const testimonialsData = testimonials.map((item) => ({
-  ...item,
-  id: generateId(),
-}));
-
-export const achievementsData = achievements.map((item) => ({
-  ...item,
-  id: generateId(),
-}));
-
-export const faqQuestionsData = faqQuestions.map((item) => ({
-  ...item,
-  id: generateId(),
-}));

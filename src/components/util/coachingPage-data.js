@@ -1,6 +1,4 @@
-import generateId from "./IDGenerator";
-
-const listItems = [
+export const listItems = [
   {
     text: "Отримання додаткових джерел доходу завдяки монетизації ідей, до яких не доходили руки",
   },
@@ -12,16 +10,7 @@ const listItems = [
   },
 ];
 
-const faqQuestions = [
-  {
-    question: "На який мінімальний термін можна отримати супровід?",
-    answer:
-      "Супровід - наша тривала взаємодія, і її термін складає від 3 місяців.",
-    open: false,
-  },
-];
-
-const testimonials = [
+export const testimonials = [
   {
     src: "/src/assets/slides-coaching/slide-1.jpg",
     alt: "review",
@@ -56,16 +45,12 @@ const testimonials = [
   },
 ];
 
-export const listItemsData = listItems.map((item) => ({
-  ...item,
-  id: generateId(),
-}));
-
-export const faqQuestionsData = faqQuestions.map((item) => ({
-  ...item,
-  id: generateId(),
-}));
-export const testimonialsData = testimonials.map((item) => ({
-  ...item,
-  id: generateId(),
-}));
+export const faqQuestions = [
+  {
+    id: 'coachingpagefaqdata01',
+    question: "На який мінімальний термін можна отримати супровід?",
+    answer:
+      "Супровід - наша тривала взаємодія, і її термін складає від 3 місяців.",
+    open: false,
+  },
+];

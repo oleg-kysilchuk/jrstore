@@ -7,6 +7,7 @@ import Achievements from "../components/Achievements/Achievements";
 import Divider from "../components/UI/Divider/Divider";
 import FAQComponent from "../components/FAQ/FAQComponent";
 import * as bmsData from "../components/util/bmsPage-data";
+import { subscriptions } from "../components/util/products-data";
 import bgImg from "../assets/bms-bg.jpg";
 import styles from "../styles/Bms.module.css";
 
@@ -28,12 +29,12 @@ const Bms = () => {
         </div>
       </section>
       <Subscriptions />
-      <SubscriptionOffers />
+      <SubscriptionOffers data={subscriptions} />
       <Divider>Відгуки</Divider>
-      <Section className={styles.testimonials}>
-        <TestimonialsSlider data={bmsData.testimonialsData} />
+      <Section>
+        <TestimonialsSlider data={bmsData.testimonials} />
       </Section>
-      <Achievements data={bmsData.achievementsData} />
+      <Achievements data={bmsData.achievements} />
       <Divider>Відповіді на популярні запитання</Divider>
       <Section>
         <FAQComponent bmsPage />

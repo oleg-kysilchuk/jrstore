@@ -107,3 +107,12 @@ body {
   font-family: 'Mulish', sans-serif;
   font-size: 16px;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: #111;
+}

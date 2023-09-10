@@ -12,8 +12,8 @@ const SubscriptionItem = (props) => {
         {props.list ? (
           <ul className={styles.subList}>
             {props.listTitle}
-            {props.list.map((i) => (
-              <li className={styles.subListItem} key={i.index}>
+            {props.list.map((i, index) => (
+              <li className={styles.subListItem} key={index}>
                 {i.text}
               </li>
             ))}

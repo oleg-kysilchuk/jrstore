@@ -1,0 +1,53 @@
+.details-container {
+    width: 57%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.details-linkItem {
+    margin-bottom: 25px;
+}
+
+.details-link {
+    font-size: 15px;
+    margin-left: 5px;
+    font-weight: 400;
+    color: #ff8700;
+}
+
+.details-link:hover {
+    color: #ffac12;
+}
+
+.details-title {
+    margin-bottom: 25px;
+}
+
+.details-description {
+    margin-bottom: 25px;
+}
+
+.details-text {
+    margin-bottom: 25px;
+}
+
+.details-list {
+    margin-bottom: 25px;
+}
+
+.details-listItem:not(:first-child) {
+    padding-left: 5px;
+}
+
+.details-listItem:first-child {
+    margin-bottom: 7px;
+}
+
+.details-format {
+
+}
+
+.details-language {
+    
+}
