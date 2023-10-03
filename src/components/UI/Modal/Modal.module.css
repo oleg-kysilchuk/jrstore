@@ -63,8 +63,18 @@
   right: 30px;
 }
 
+.close-btn:hover,
+.close-btn:focus {
+  transform: scale(0.85);
+}
+
 .back-btn {
   position: absolute;
   top: 30px;
   left: 30px;
+}
+
+.back-btn:hover,
+.back-btn:focus {
+  transform: scale(0.85);
 }

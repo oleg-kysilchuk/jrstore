@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import SectionParallax from "../components/UI/SectionParallax/SectionParallax";
 import Divider from "../components/UI/Divider/Divider";
 import Section from "../components/UI/Section/Section";
@@ -5,11 +6,16 @@ import List from "../components/List/List";
 import ContactForm from "../components/Forms/ContactForm";
 import FAQComponent from "../components/FAQ/FAQComponent";
 import SliderTestimonials from "../components/Slider/TestimonialsSlider";
+import { ScrollRestoration } from "react-router-dom";
 import * as coachingPageData from "../components/util/coachingPage-data";
 import bgImg from "../assets/coaching-bg.jpg";
 import styles from "../styles/Coaching.module.css";
 
 const Coaching = () => {
+  useEffect(() => {
+    document.title = "Супровід";
+  }, []);
+
   return (
     <>
       <SectionParallax
@@ -37,8 +43,9 @@ const Coaching = () => {
       </Section>
       <Divider>Відповіді на популярні запитання</Divider>
       <Section>
-        <FAQComponent coachingPage />
+        <FAQComponent pageType='coachingPage' />
       </Section>
+      <ScrollRestoration />
     </>
   );
 };

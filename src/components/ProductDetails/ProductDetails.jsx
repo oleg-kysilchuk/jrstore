@@ -11,6 +11,7 @@ const ProductDetails = (props) => {
             className={styles.detailsLink}
             to={props.details.link.to}
             title={props.details.link.title}
+            onClick={props.onModalClose}
           >
             {props.details.link.text}
           </NavLink>

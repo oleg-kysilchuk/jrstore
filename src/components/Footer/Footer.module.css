@@ -22,11 +22,13 @@
     margin: 0 1px;
 }
 
-.social-link:hover .social-icon {
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
     fill: #c7c7c7;
 }
 
-.scroll-btn:hover {
+.scroll-btn:hover,
+.scroll-btn:focus {
     color: #c7c7c7;
 }
 
@@ -39,6 +41,7 @@
     top: 5px;
 }
 
-.scroll-btn:hover .scroll-arrow path {
+.scroll-btn:hover .scroll-arrow path,
+.scroll-btn:focus .scroll-arrow path {
     fill: #c7c7c7;
 }

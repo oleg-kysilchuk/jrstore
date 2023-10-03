@@ -2,6 +2,14 @@ import styles from "./Footer.module.css";
 import scrollToTop from "../util/scroll";
 
 const Footer = () => {
+  const scrollOnKey = (e) => {
+    if (e.keyCode === 13) {
+      scrollToTop();
+    } else {
+      return;
+    }
+  };
+
   return (
     <footer className={styles.pageFooter}>
       <p>&#169; JRStore</p>
@@ -43,7 +51,12 @@ const Footer = () => {
         </a>
       </div>
 
-      <a className={styles.scrollBtn} onClick={scrollToTop}>
+      <a
+        tabIndex="0"
+        className={styles.scrollBtn}
+        onClick={scrollToTop}
+        onKeyUp={scrollOnKey}
+      >
         <span className={styles.scrollText}>на верх</span>
         <span className={styles.scrollArrow}>
           <svg

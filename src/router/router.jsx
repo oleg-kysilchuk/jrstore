@@ -6,8 +6,14 @@ import Bms from "../pages/Bms";
 import Coaching from "../pages/Coaching";
 import Products from "../pages/Products";
 import Esoteric from "../pages/Esoteric";
+import Workshop from "../pages/Workshop";
+import NotFound from "../pages/NotFound";
 
 const router = createBrowserRouter([
+  {
+    path: '*',
+    element: <NotFound />,
+  },
   {
     path: "/",
     element: <Layout />,
@@ -31,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <Products />,
+      },
+      {
+        path: "/workshop",
+        element: <Workshop />,
       },
     ],
   },

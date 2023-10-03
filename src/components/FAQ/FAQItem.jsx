@@ -2,12 +2,22 @@ import styles from "./FAQItem.module.css";
 
 const FAQItem = (props) => {
   let open = props.open ? "open" : "";
+
+  const openOnKey = (e) => {
+    if(e.keyCode === 13) {
+      props.toggleFAQ(props.id)
+    } else {
+      return
+    }
+  }
   
   return (
     <>
       <p
         className={styles.faqQuestion}
         onClick={() => props.toggleFAQ(props.id)}
+        onKeyUp={openOnKey}
+        tabIndex='0'
       >
         {props.question}
       </p>

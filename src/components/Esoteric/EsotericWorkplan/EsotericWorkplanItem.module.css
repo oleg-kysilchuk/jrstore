@@ -7,13 +7,13 @@
 .list:nth-of-type(1n) {
   align-self: flex-start;
   text-align: right;
-  margin-left: 18%;
+  margin-left: 18.05%;
 }
 
 .list:nth-of-type(2n) {
   align-self: flex-end;
   text-align: left;
-  margin-right: 18%;
+  margin-right: 17.95%;
 }
 
 .list:nth-of-type(1n) > .item-label {

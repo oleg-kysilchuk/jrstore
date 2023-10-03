@@ -1,25 +1,52 @@
+import { useState } from "react";
+import useFetchData from '../../hooks/use-fetchData';
+import LoadingSpinner from '../UI/LoadingSpinner/LoadingSpinner';
+import Error from '../UI/Error/Error';
 import FAQItem from "./FAQItem";
 import styles from "./FAQComponent.module.css";
-import { useState } from "react";
-import { faqQuestions as matrixPageFaq } from "../util/matrixPage-data";
-import { faqQuestions as coachingFaq } from "../util/coachingPage-data";
-import { faqQuestions as bmsFaq } from "../util/bmsPage-data";
-import { faqQuestionsWorkshop1 as workshop1Faq } from "../util/workshops-data";
 
 const FAQComponent = (props) => {
-  const [faqs, setFaqs] = useState(props.matrixPage ? matrixPageFaq : (props.coachingPage ? coachingFaq : bmsFaq));
+
+  const { status, error, data } = useFetchData('http://localhost:8000/faq-data');
+  console.log(data)
+  
+  let defaultFaqs;
+
+  switch (props.pageType) {
+    case 'matrixPage':
+      defaultFaqs = data.matrixPageFAQ;
+      break;
+    case 'coachingPage':
+      defaultFaqs = data.coachingPageFAQ;
+      break;
+    case 'bmsPage':
+      defaultFaqs = data.bmsPageFAQ;
+      break;
+    case 'workshop1':
+      defaultFaqs = data.workshop01FAQ;
+      break;
+    default:
+      defaultFaqs = null;
+      break;
+  }
+
+  const [faqs, setFaqs] = useState(defaultFaqs);
+
   const toggleFAQ = (id) => {
     setFaqs(
       faqs.map((faq) => {
         faq.id === id ? (faq.open = !faq.open) : (faq.open = false);
-        
+
         return faq;
       })
     );
   };
 
   return (
-    <div className={styles.faqComponent}>
+    <>
+    {status === 'loading' && <LoadingSpinner />}
+    {error && <Error />}
+    {data && <div className={styles.faqComponent}>
       <ul>
         {faqs.map((item) => (
           <li className={styles.faqListItem} key={item.id}>
@@ -35,7 +62,8 @@ const FAQComponent = (props) => {
           </li>
         ))}
       </ul>
-    </div>
+    </div>}
+    </>
   );
 };
 

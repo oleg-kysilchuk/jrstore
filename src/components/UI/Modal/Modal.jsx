@@ -10,7 +10,7 @@ const Modal = (props) => {
         <p className={styles.modalPrice}>{props.price} ₴</p>
         <button className={styles.buyBtn}>Купити</button>
 
-        <ProductDetails details={props.details} />
+        <ProductDetails details={props.details} onModalClose={props.onClick} />
       </div>
 
       <button className={styles.closeBtn} onClick={props.onClick}>

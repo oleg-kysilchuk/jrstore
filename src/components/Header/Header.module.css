@@ -32,6 +32,10 @@
   color: #000;
 }
 
+.nav-link:first-of-type {
+  padding-top: 1px;
+}
+
 .link-active {
   margin: 0 15px;
   font-weight: 700;
@@ -40,6 +44,24 @@
 
 .nav-link:hover {
   color: #444;
+}
+
+.nav-link:focus-visible {
+  color: #444;
+  text-decoration: underline;
+}
+
+.nav-link:focus-visible > img {
+  outline: 2px solid #555;
+}
+
+.nav-link:focus:not(:focus-visible) {
+  outline: none;
+  text-decoration: none;
+}
+
+.nav-link:focus:not(:focus-visible) > img {
+  outline: none;
 }
 
 .logo {
@@ -55,6 +77,7 @@
   height: 30px;
 }
 
-.social-link:hover .social-icon {
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
   fill: #444;
 }

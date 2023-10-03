@@ -7,10 +7,12 @@ const ProductCardMain = (props) => {
     const [isModal, setIsModal] = useState(false);
 
     const openModal = () => {
+        document.body.style.overflowY = 'hidden';
         setIsModal(true);
     }
 
     const closeModal = () => {
+        document.body.style.overflowY = 'unset';
         setIsModal(false);
     }
 

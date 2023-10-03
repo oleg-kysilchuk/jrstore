@@ -24,7 +24,7 @@
 }
 
 .vertical-line {
-  width: 2px;
+  width: 0.1px;
   height: 87%;
   background-color: #222;
   position: absolute;

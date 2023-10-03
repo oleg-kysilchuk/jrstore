@@ -45,12 +45,12 @@ export const testimonials = [
   },
 ];
 
-export const faqQuestions = [
-  {
-    id: 'coachingpagefaqdata01',
-    question: "На який мінімальний термін можна отримати супровід?",
-    answer:
-      "Супровід - наша тривала взаємодія, і її термін складає від 3 місяців.",
-    open: false,
-  },
-];
+// export const faqQuestions = [
+//   {
+//     id: 'coachingpagefaqdata01',
+//     question: "На який мінімальний термін можна отримати супровід?",
+//     answer:
+//       "Супровід - наша тривала взаємодія, і її термін складає від 3 місяців.",
+//     open: false,
+//   },
+// ];

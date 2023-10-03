@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className={styles.pageHeader}>
       <nav className={styles.pageNavigation}>
-        <NavLink to="/">
+        <NavLink to="/" className={styles.navLink}>
           <img className={styles.logo} src={logo} />
         </NavLink>
         <div className={styles.navWrap}>
@@ -32,9 +32,6 @@ const Header = () => {
               isActive ? styles.linkActive : styles.navLink
             } to="/products">
             В записі
-          </NavLink>
-          <NavLink className={styles.navLink} to='/esoteric'>
-            Esoteric
           </NavLink>
         </div>
         <div className={styles.socialWrap}>

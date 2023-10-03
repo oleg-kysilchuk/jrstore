@@ -5,6 +5,10 @@
   cursor: pointer;
 }
 
+.faq-question:focus {
+  text-decoration: underline;
+}
+
 .faq-answer {
   display: none;
 }

@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import Section from "../components/UI/Section/Section";
 import HomeLinkCard from "../components/HomeLinkCard/HomeLinkCard";
 import styles from "../styles/Home.module.css";
 import imgAbout from "../assets/photo-julia.jpg";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Головна";
+  }, []);
+
   return (
     <>
       <Section className={styles.homeLinks}>

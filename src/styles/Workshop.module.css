@@ -1,0 +1,39 @@
+.workshop-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.workshop-title {
+    width: 77%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.workshop-subtitle {
+    margin: 0 auto;
+    margin-bottom: 70px;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.workshop-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.workshop-description {
+    width: 25%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.workshop-description:first-of-type {
+    font-weight: 700;
+}

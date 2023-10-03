@@ -12,6 +12,7 @@ const SubscriptionOffers = (props) => {
             id={item.id}
             title={item.title}
             price={item.price}
+            details={item.details}
           />
         ))}
       </div>
