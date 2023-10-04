@@ -98,7 +98,7 @@ const Matrix = () => {
           <Achievements data={pageData.data.achievements} />
           <Divider>Відповіді на популярні запитання</Divider>
           <Section>
-            <FAQComponent pageType="matrixPage" />
+            <FAQComponent data={pageData.data.faqData} />
           </Section>
           <ScrollRestoration />
         </Fragment>

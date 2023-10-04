@@ -36,7 +36,7 @@ const useFetchData = (apiUrl) => {
   useEffect(() => {
     fetchData(apiUrl);
   }, [apiUrl]);
-
+  console.log(state.data)
   return state;
 };
 

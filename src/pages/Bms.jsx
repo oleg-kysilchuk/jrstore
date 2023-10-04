@@ -57,7 +57,7 @@ const Bms = () => {
           <Achievements data={pageData.data.achievements} />
           <Divider>Відповіді на популярні запитання</Divider>
           <Section>
-            <FAQComponent pageType="bmsPage" />
+            <FAQComponent data={pageData.data.faqData} />
           </Section>
           <ScrollRestoration />
         </Fragment>

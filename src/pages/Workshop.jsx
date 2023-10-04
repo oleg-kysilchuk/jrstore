@@ -54,7 +54,7 @@ const Workshop = () => {
           </Section>
           <Divider>Відповіді на популярні запитання</Divider>
           <Section>
-            <FAQComponent pageType="workshop1" />
+            <FAQComponent data={data.workshop01.faqData} />
           </Section>
           <ScrollRestoration />
         </Fragment>
